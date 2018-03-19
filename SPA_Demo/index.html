@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-cloak="">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Shiv Project</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<header ng-include="'templates/header.html'"></header>
+<div class="container">
+    <div class="row">
+        <div ng-view></div>
+    </div>
+</div>
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h1>Shiv Project</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac ipsum tempus, pharetra mi ac,
+                    pulvinar elit. Sed dictum venenatis eros, vel pulvinar ex suscipit non. </p>
+            </div>
+            <div class="col-sm-4">
+                <h3>Navigation</h3>
+                <ul ng-controller="header">
+                    <li ng-repeat="x in navbar |  orderBy : 'id'"><a href="#{{x.link}}">{{x.link | uppercase}}</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h3>Contact Us</h3>
+                <form>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="app.js"></script>
+<script src="config.js"></script>
+<script src="controllers/header.js"></script>
+<script src="controllers/about.js"></script>
+<script src="controllers/contact.js"></script>
+<script src="controllers/home.js"></script>
+<script src="controllers/services.js"></script>
+<script src="controllers/team.js"></script>
+<script src="controllers/work.js"></script>
+
+</body>
+</html>

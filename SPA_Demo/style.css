@@ -1,0 +1,7 @@
+@import "bower_components/bootstrap/dist/css/bootstrap.min.css";
+@import "bower_components/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css";
+
+* {
+     margin: 0;
+     padding: 0;
+ }
